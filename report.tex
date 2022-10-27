@@ -1,0 +1,129 @@
+\documentclass{tudelft-report}
+
+%% Setting up the bibliography
+% \usepackage{biblatex}
+% \addbibresource{report.bib}
+
+%% Additional packages and commands
+\setlist{itemsep=-2pt} % Reducing white space in lists slightly
+\renewcommand{\deg}{\si{\degree}\xspace} % Use \deg easily, everywhere
+\usepackage{acronym} 
+\usepackage{physics}
+\usepackage{pdfpages}
+% \usepackage[ruled,vlined,linesnumbered]{algorithm2e}    
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{dirtytalk}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\usepackage{makecell}
+% \usepackage{landscape}
+\usepackage{adjustbox}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{rotating}
+\usepackage{hhline}
+\usepackage{multirow}
+% \usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[graphicx]{realboxes}
+\usepackage{colortbl}
+
+
+\usepackage{parskip} %https://www.overleaf.com/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Begin of document %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% Roman page numbering
+\frontmatter
+
+%% Defining the main parameters
+
+\title{\textbf{Aggregation of Energy Flexibility}}
+\subtitle{Flexibility solutions for the cities of the future} 
+\author{N. K. (Nanda) Panda}
+\subject{Ph.D First Year Report (23 September 2022)}
+\affiliation{Delft University of Technology}
+
+\coverimage{figures/cover.jpg} % Aspect ratio of 2:3 (portrait) recommended
+\definecolor{title}{HTML}{4884d6} % Color for title
+
+\makecover
+\input{mainmatter/title_project}
+
+
+% \input{frontmatter/preface}
+% \input{frontmatter/summary}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+
+
+\mainmatter
+
+\input{mainmatter/introduction}
+
+\input{mainmatter/chapter-2}
+\input{mainmatter/chapter-3}
+%\input{mainmatter/chapter-4} % Create file to add
+
+\input{mainmatter/conclusion}
+
+%% Prevent urls running into margins in bibliography
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+
+%% Add bibliography
+\printbibliography[heading=bibintoc,title=References]
+
+%% ----------------------------------------------------------------------
+%%    Appendix (Letters for chapters)
+%% ----------------------------------------------------------------------
+
+\appendix
+
+\input{appendix/appendix-a}
+\input{appendix/appendix-b}
+%\input{appendix/appendix-c} % Create file to add
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{references.bib}
+%% Prevent urls running into margins in bibliography
+% \setcounter{biburlnumpenalty}{7000}
+% \setcounter{biburllcpenalty}{7000}
+% \setcounter{biburlucpenalty}{7000}
+
+%% Add bibliography
+% \printbibliography[heading=bibintoc,title=References]
+
+% 
+
+%% Letters for chapters
+% \appendix
+
+% \input{appendix/appendix-a}
+% \input{appendix/appendix-b}
+%\input{appendix/appendix-c} % Create file to add
+
+
+\end{document}

@@ -1,0 +1,77 @@
+\begin{titlepage}
+
+\begin{center}
+
+%% Print the title
+{\makeatletter
+\largetitlestyle\fontsize{45}{45}\color{black}\selectfont\@title
+\makeatother}
+
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\bigskip\fontsize{20}{20}\selectfont\@subtitle}
+\makeatother}
+
+\bigskip
+\bigskip
+
+by
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\largetitlestyle\fontsize{25}{25}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+%% Print table with names and student numbers
+\setlength\extrarowheight{2pt}
+
+\bigskip
+\bigskip
+    \includegraphics[width=0.25\linewidth]{figures/IEPG logo.jpg}\\
+    \textit{Intelligent Electrical Power Grids}\\
+    \textbf{Faculty of Electrical Engineering, Mathematics and Computer Science}
+
+\vfill
+%% Print some more information at the bottom
+\begin{tabular}{c|lcl}
+\multirow{4}{*}{Go/ No-Go Commitee} & Promotor          & : & Prof.dr. P. (Peter) Palensky     \\
+                                    & Co-Promotor       & : & dr. S.H. (Simon) Tindemans       \\
+                                    & Member (External) & : & dr. S.J. (Stefan) Pfenninger                                 \\
+                                    & Member (Internal) & : & dr. P.P. (Pedro) Vergara Barrios
+\end{tabular}
+\end{center}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\begin{figure*}[h]
+    \includegraphics[width=0.25\linewidth]{figures/ROBU_logo_groot (1).jpeg}
+    % \caption{Caption}
+    \label{fig:my_label}
+\end{figure*}
+\footnotesize{This PhD project is fully funded by the ROBUST project. For more information, visit their web-page at: https://tki-robust.nl/. ROBUST received funding from the \textit{MOOI 2020} Top Sector Energy subsidy programme by the Ministry of Economic Affairs and Climate Policy, executed by the Netherlands Enterprise Agency.\\
+\\
+\textbf{Ph.D. funding period:} 1 September 2021 till 31 August 2025}
+\bigskip
+\bigskip
+
+%% Add a source and description for the cover and optional attribution for the template
+
+
+
+
+%% Insert the TU Delft logo at the bottom of the page
+\begin{tikzpicture}[remember picture, overlay]
+    \node[above=10mm] at (current page.south) {%
+        \includegraphics[width=0.25\linewidth]{layout/tudelft/logo-black}
+    };
+\end{tikzpicture}
+
+\end{titlepage}
